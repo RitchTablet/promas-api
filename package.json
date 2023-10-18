@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "node dist/index.js",
-    "start:dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/main.js",
+    "start:dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\"",
     "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "pg": "^8.11.3",
@@ -29,6 +30,9 @@
     "lint-staged": "^15.0.1",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   }
 }
