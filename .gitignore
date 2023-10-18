@@ -1,0 +1,49 @@
+# Archivos y directorios generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorios de dependencias (por ejemplo, Node.js)
+node_modules/
+
+# Archivos generados por lenguajes de programación o compiladores
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Directorio y archivos de configuración locales
+.env
+config.json
+
+# Directorio de carga de archivos (subida por usuarios)
+uploads/
+
+# Entornos de desarrollo o IDE específicos
+.idea/
+.vscode/
+
+# Archivos de registro y salida
+logs/
+log.txt
+
+# Archivos generados al compilar o construir
+dist/
+build/
+bin/
+
+# Copias de seguridad generadas automáticamente
+*.backup
+*.back
+*.~backup~
+
+# Archivos de configuración específicos para sistemas operativos
+*.ini
+*.conf
+*.plist
+
+# Cualquier archivo que termine con .tmp o .swp
+*.[Tt][Mm][Pp]
+*.[Ss][Ww][Pp]
+
+# Docker data
+postgres_data
