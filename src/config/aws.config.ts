@@ -1,10 +1,19 @@
 import aws from "aws-sdk";
 
-aws.config.update({
-  s3: { endpoint: "http://localhost:4566", s3ForcePathStyle: true }, // La URL de LocalStack
-  accessKeyId: "dummy-access-key",
-  secretAccessKey: "dummy-secret-key",
-  region: "us-east-1", // Puedes utilizar cualquier región
-});
+const isProduction = process.env.IS_PRODUCTION;
+
+let awsConfig: any = {
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.REGION,
+};
+
+if (!isProduction)
+  awsConfig.s3 = {
+    endpoint: process.env.LOCALSTACK_ENDPOINT,
+    s3ForcePathStyle: true,
+  }; // this a especial conf for localstack
+
+aws.config.update(awsConfig);
 
 export default aws;

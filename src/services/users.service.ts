@@ -1,9 +1,9 @@
 import { CreateUserDto } from "@app-dtos/create-user.dto";
 import { LoginDto } from "@app-dtos/login.dto";
+import { myDataSource } from "@app/app-data-source";
+import { Follow } from "@app/entity/follow.entity";
+import { User } from "@app/entity/user.entity";
 import bcrypt from "bcrypt";
-import { myDataSource } from "src/app-data-source";
-import { Follow } from "src/entity/follow.entity";
-import { User } from "src/entity/user.entity";
 import { Repository } from "typeorm";
 
 export class UsersService {
@@ -36,6 +36,7 @@ export class UsersService {
     const { username, password } = loginDto;
     const user = await this.userRepository.findOne({ where: { username } });
 
+    console.log({ user });
     if (user) {
       const isPasswordValid = await bcrypt.compare(password, user.password);
 

@@ -48,3 +48,8 @@ bin/
 # Docker data
 postgres_data
 volume
+
+# Archivos pem
+*pem
+
+temp

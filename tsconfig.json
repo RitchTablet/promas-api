@@ -19,6 +19,7 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "paths": {
+      "@app/*": ["src/*"],
       "@app-controllers/*": ["src/controllers/*"],
       "@app-routes/*": ["src/routes/*"],
       "@app-middlewares/*": ["src/middlewares/*"],

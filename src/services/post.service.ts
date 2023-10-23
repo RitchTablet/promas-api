@@ -1,7 +1,7 @@
 import { SearchDto } from "@app-dtos/search.dto";
-import { myDataSource } from "src/app-data-source";
-import { PostDto } from "src/dtos/post.dto";
-import { Post } from "src/entity/post.entity";
+import { myDataSource } from "@app/app-data-source";
+import { PostDto } from "@app/dtos/post.dto";
+import { Post } from "@app/entity/post.entity";
 import { ILike, Repository } from "typeorm";
 
 export class PostService {

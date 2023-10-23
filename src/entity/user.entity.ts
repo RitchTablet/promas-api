@@ -34,7 +34,6 @@ export class User extends BaseEntity {
   posts: Post[];
 
   @BeforeInsert()
-  @BeforeUpdate()
   async hashPasword() {
     if (!this.password) return;
 

@@ -20,6 +20,7 @@ export const login = async (req: Request | any, res: Response) => {
     profileImageUrl: user.profileImageUrl,
     fullName: user.fullName,
   };
+
   const access_token = jwtService.sign(userPayload);
 
   return res.status(200).send({ access_token });

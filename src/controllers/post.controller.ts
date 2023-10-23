@@ -7,7 +7,7 @@ import { Request, Response } from "express";
 
 const postService = new PostService();
 const userService = new UsersService();
-const s3Service = new S3Service("files");
+const s3Service = new S3Service(process.env.BUCKET_NAME);
 
 export const getPosts = async (req: Request, res: Response) => {
   const posts = await postService.getPosts();

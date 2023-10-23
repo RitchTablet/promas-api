@@ -3,7 +3,7 @@ import { UsersService } from "@app-services/users.service";
 import { Request, Response } from "express";
 
 const usersService = new UsersService();
-const s3Service = new S3Service("files");
+const s3Service = new S3Service(process.env.BUCKET_NAME);
 
 export const createUser = async (req: Request | any, res: Response) => {
   const user = req.body;

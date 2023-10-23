@@ -1,7 +1,7 @@
 import { S3Service } from "@app-services/s3.service";
 import { Request, Response } from "express";
 
-const s3Service = new S3Service("files");
+const s3Service = new S3Service(process.env.BUCKET_NAME);
 
 export const uploadFile = async (req: Request | any, res: Response) => {
   const { file } = req;
