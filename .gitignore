@@ -47,3 +47,4 @@ bin/
 
 # Docker data
 postgres_data
+volume

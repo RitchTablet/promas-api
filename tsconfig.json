@@ -21,6 +21,10 @@
     "paths": {
       "@app-controllers/*": ["src/controllers/*"],
       "@app-routes/*": ["src/routes/*"],
+      "@app-middlewares/*": ["src/middlewares/*"],
+      "@app-config/*": ["src/config/*"],
+      "@app-services/*": ["src/services/*"],
+      "@app-dtos/*": ["src/dtos/*"],
     }
   }
 }
