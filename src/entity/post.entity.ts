@@ -7,7 +7,7 @@ export class Post extends BaseEntity {
   @Column()
   title: string;
 
-  @Column()
+  @Column("text")
   content: string;
 
   @Column({ nullable: true })
@@ -22,7 +22,7 @@ export class Post extends BaseEntity {
       title: this.title,
       content: this.content,
       imgBannerUrl: this.imgBannerUrl,
-      createdAt: this.createdAt,
+      createdAt: new Date(this.createdAt).toISOString(),
       username: this.user?.username,
       profileImageUrl: this.user?.profileImageUrl,
     };

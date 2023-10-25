@@ -12,9 +12,19 @@ export class BaseEntity {
   @Column({ default: true })
   isActive: boolean;
 
-  @CreateDateColumn({ type: "timestamp with time zone", name: "created_at" })
+  @CreateDateColumn({
+    type: "timestamp",
+    default: () => "CURRENT_TIMESTAMP(6)",
+    name: "created_at",
+    precision: 6,
+  })
   createdAt: Date;
 
-  @UpdateDateColumn({ type: "timestamp with time zone", name: "updated_at" })
+  @UpdateDateColumn({
+    type: "timestamp",
+    default: () => "CURRENT_TIMESTAMP(6)",
+    name: "updated_at",
+    precision: 6,
+  })
   updatedAt: Date;
 }

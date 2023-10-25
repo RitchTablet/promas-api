@@ -46,7 +46,7 @@ bin/
 *.[Ss][Ww][Pp]
 
 # Docker data
-postgres_data
+*_data
 volume
 
 # Archivos pem

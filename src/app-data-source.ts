@@ -4,7 +4,7 @@ import { config } from "dotenv";
 config();
 
 export const myDataSource = new DataSource({
-  type: "postgres",
+  type: "mysql",
   host: process.env.HOST,
   port: parseInt(process.env.PORT_DB, 10),
   username: process.env.USERNAME,
@@ -13,5 +13,4 @@ export const myDataSource = new DataSource({
   entities: ["dist/entity/*.js"],
   logging: true,
   synchronize: true,
-  ssl: { rejectUnauthorized: false },
 });
